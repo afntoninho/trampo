@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Application Test Suite" tests="10" assertions="32" failures="0" errors="0" time="10.946627">
+    <testsuite name="IndexControllerTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Controller\IndexControllerTest.php" tests="2" assertions="6" failures="0" errors="0" time="3.412195">
+      <testcase name="test404" class="IndexControllerTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Controller\IndexControllerTest.php" line="31" assertions="1" time="1.074061"/>
+      <testcase name="testIndexAction" class="IndexControllerTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Controller\IndexControllerTest.php" line="42" assertions="5" time="2.338134"/>
+    </testsuite>
+    <testsuite name="Application\Model\ChamadoTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Model\ChamadoTest.php" namespace="Application\Model" fullPackage="Application.Model" tests="8" assertions="26" failures="0" errors="0" time="7.534432">
+      <testcase name="testGetInputFilter" class="Application\Model\ChamadoTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Model\ChamadoTest.php" line="13" assertions="1" time="0.739042"/>
+      <testcase name="testInputFilterValid" class="Application\Model\ChamadoTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Model\ChamadoTest.php" line="25" assertions="13" time="0.589034"/>
+      <testcase name="testInputFilterInvalido" class="Application\Model\ChamadoTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Model\ChamadoTest.php" line="47" assertions="2" time="0.772045"/>
+      <testcase name="testInsert" class="Application\Model\ChamadoTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Model\ChamadoTest.php" line="57" assertions="2" time="0.887051"/>
+      <testcase name="testInsertInvalido" class="Application\Model\ChamadoTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Model\ChamadoTest.php" line="71" assertions="1" time="0.797045"/>
+      <testcase name="testUpdate" class="Application\Model\ChamadoTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Model\ChamadoTest.php" line="80" assertions="3" time="1.634094"/>
+      <testcase name="testUpdateInvalido" class="Application\Model\ChamadoTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Model\ChamadoTest.php" line="105" assertions="1" time="1.108064"/>
+      <testcase name="testDelete" class="Application\Model\ChamadoTest" file="C:\wamp\www\zf2napratica2\module\Application\tests\src\Application\Model\ChamadoTest.php" line="122" assertions="3" time="1.008057"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

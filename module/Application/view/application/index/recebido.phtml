@@ -1,0 +1,85 @@
+<?php //var_dump($chamados); die();  ?>
+
+<table class="table table-striped table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th colspan="12" class="text-center">Terceirizados</th>
+        </tr>
+        <tr>
+            <th class="text-center">Número</th>
+            <th class="text-center">Chamado BBTS</th>
+            <th class="text-center">Dependência</th>
+            <th class="text-center">Data Chamado</th>
+            <th class="text-center">Data Limite</th>
+            <th class="text-center">Status</th>
+            <th class="text-center">Técnico</th>
+            <th class="text-center">Agência</th>
+            <th class="text-center">Nro Contrato</th>
+            <th class="text-center">Grupo</th>
+            <th class="text-center">Controlador</th>
+            <th class="text-center">Observação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($chamados as $chamado): ?>
+            <?php if (substr($chamado['numero'], 0, 8) == '20144804') : ?>
+                <tr>
+                    <td><?php echo $this->escapeHtml($chamado['numero']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['chamado_cobra']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['dependencia']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['dtachamado']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['dtalimite']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['status']); ?></td>
+                    <td><?php echo (isset($chamado['tecnico_alocado'])) ? $this->escapeHtml($chamado['tecnico_alocado']) : ''; ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['agencia']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['nrocontrato']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['grupo']); ?></td>
+                    <td><?php echo (isset($chamado['controlador'])) ? $this->escapeHtml($chamado['controlador']) : ''; ?></td>
+                    <td><?php echo (isset($chamado['observacao'])) ? $this->escapeHtml($chamado['observacao']) : ''; ?></td>
+                </tr>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+<table class="table table-striped table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th colspan="12" class="text-center">Não Terceirizados</th>
+        </tr>
+        <tr>
+            <th class="text-center">Número</th>
+            <th class="text-center">Chamado BBTS</th>
+            <th class="text-center">Dependência</th>
+            <th class="text-center">Data Chamado</th>
+            <th class="text-center">Data Limite</th>
+            <th class="text-center">Status</th>
+            <th class="text-center">Técnico</th>
+            <th class="text-center">Agência</th>
+            <th class="text-center">Nro Contrato</th>
+            <th class="text-center">Grupo</th>
+            <th class="text-center">Controlador</th>
+            <th class="text-center">Observação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($chamados as $chamado): ?>
+            <?php if (substr($chamado['numero'], 0, 8) != '20144804') : ?>
+                <tr>
+                    <td><?php echo $this->escapeHtml($chamado['numero']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['chamado_cobra']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['dependencia']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['dtachamado']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['dtalimite']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['status']); ?></td>
+                    <td><?php echo (isset($chamado['tecnico_alocado'])) ? $this->escapeHtml($chamado['tecnico_alocado']) : ''; ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['agencia']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['nrocontrato']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['grupo']); ?></td>
+                    <td><?php echo (isset($chamado['controlador'])) ? $this->escapeHtml($chamado['controlador']) : ''; ?></td>
+                    <td><?php echo (isset($chamado['observacao'])) ? $this->escapeHtml($chamado['observacao']) : ''; ?></td>
+                </tr>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </tbody>
+</table>
