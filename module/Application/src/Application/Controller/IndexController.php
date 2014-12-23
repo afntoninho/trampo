@@ -7,6 +7,7 @@ use Core\Controller\ActionController;
 use Zend\Paginator\Paginator;
 use Zend\Paginator\Adapter\DbSelect as PaginatorDbSelectAdapter;
 use Zend\Db\Sql\Select;
+require_once('C:/wamp/www/zf2napratica2/vendor/phpexcel/Classes/PHPExcel/Reader/Excel2007.php');
 
 /**
  * Controlador que gerencia os chamados
@@ -63,6 +64,24 @@ class IndexController extends ActionController {
         return new ViewModel(array(
             'chamados' => $tecnico->fetchAll(null, array('status' => 'FECHADO'))->toArray()
         ));
+    }
+    
+    public function importExcelAction() {
+        ini_set ('memory_limit', '1024M');
+        $objReader = new \PHPExcel_Reader_Excel2007();
+        $objReader->setReadDataOnly(true);
+        $objPHPExcel = $objReader->load('C:/wamp/www/zf2napratica2/chamados.xlsx');
+        
+        $sheetData = $objPHPExcel->getActiveSheet()->toArray();
+            //var_dump($sheetData);
+            
+        echo strtolower($sheetData[0][0]);
+        
+        die();
+
+        //return new ViewModel(array(
+            //'chamados' => $tecnico->fetchAll(null, array('status' => 'FECHADO'))->toArray()
+        //));
     }
 
 }

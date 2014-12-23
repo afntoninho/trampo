@@ -29,12 +29,12 @@ class Chamado extends Entity
     /**
      * @var string
      */
-    protected $numero;
+    protected $numeroos;
 
     /**
      * @var string
      */
-    protected $chamado_cobra;
+    protected $chamadocobra;
     
     /**
      * @var string
@@ -59,7 +59,7 @@ class Chamado extends Entity
     /**
      * @var string
      */
-    protected $tecnico_alocado;
+    protected $tecnicoalocado;
     
     /**
      * @var string
@@ -107,7 +107,7 @@ class Chamado extends Entity
             )));
 
             $inputFilter->add($factory->createInput(array(
-                'name'     => 'numero',
+                'name'     => 'numeroos',
                 'required' => true,
                 'filters'  => array(
                     array('name' => 'StripTags'),
@@ -126,7 +126,7 @@ class Chamado extends Entity
             )));
 
             $inputFilter->add($factory->createInput(array(
-                'name'     => 'chamado_cobra',
+                'name'     => 'chamadocobra',
                 'required' => true,
                 'filters'  => array(
                     array('name' => 'StripTags'),
@@ -201,7 +201,7 @@ class Chamado extends Entity
             )));
             
             $inputFilter->add($factory->createInput(array(
-                'name'     => 'tecnico_alocado',
+                'name'     => 'tecnicoalocado',
                 'required' => false,
                 'filters'  => array(
                     array('name' => 'StripTags'),

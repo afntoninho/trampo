@@ -22,15 +22,15 @@
     </thead>
     <tbody>
         <?php foreach ($chamados as $chamado): ?>
-            <?php if (substr($chamado['numero'], 0, 8) == '20144804') : ?>
+            <?php if (substr($chamado['numeroos'], 0, 8) == '20144804') : ?>
                 <tr>
-                    <td><?php echo $this->escapeHtml($chamado['numero']); ?></td>
-                    <td><?php echo $this->escapeHtml($chamado['chamado_cobra']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['numeroos']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['chamadocobra']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['dependencia']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['dtachamado']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['dtalimite']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['status']); ?></td>
-                    <td><?php echo (isset($chamado['tecnico_alocado'])) ? $this->escapeHtml($chamado['tecnico_alocado']) : ''; ?></td>
+                    <td><?php echo (isset($chamado['tecnicoalocado'])) ? $this->escapeHtml($chamado['tecnicoalocado']) : ''; ?></td>
                     <td><?php echo $this->escapeHtml($chamado['agencia']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['nrocontrato']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['grupo']); ?></td>
@@ -64,15 +64,15 @@
     </thead>
     <tbody>
         <?php foreach ($chamados as $chamado): ?>
-            <?php if (substr($chamado['numero'], 0, 8) != '20144804') : ?>
+            <?php if (substr($chamado['numeroos'], 0, 8) != '20144804') : ?>
                 <tr>
-                    <td><?php echo $this->escapeHtml($chamado['numero']); ?></td>
-                    <td><?php echo $this->escapeHtml($chamado['chamado_cobra']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['numeroos']); ?></td>
+                    <td><?php echo $this->escapeHtml($chamado['chamadocobra']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['dependencia']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['dtachamado']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['dtalimite']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['status']); ?></td>
-                    <td><?php echo (isset($chamado['tecnico_alocado'])) ? $this->escapeHtml($chamado['tecnico_alocado']) : ''; ?></td>
+                    <td><?php echo (isset($chamado['tecnicoalocado'])) ? $this->escapeHtml($chamado['tecnicoalocado']) : ''; ?></td>
                     <td><?php echo $this->escapeHtml($chamado['agencia']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['nrocontrato']); ?></td>
                     <td><?php echo $this->escapeHtml($chamado['grupo']); ?></td>

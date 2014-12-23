@@ -19,16 +19,16 @@ class Chamado extends Form
         ));
         
         $this->add(array(
-            'name' => 'numero',
+            'name' => 'numeroos',
             'attributes' => array(
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Número',
+                'label' => 'Número OS',
             ),
         ));
         $this->add(array(
-            'name' => 'chamado_cobra',
+            'name' => 'chamadocobra',
             'attributes' => array(
                 'type'  => 'text',
             ),
@@ -73,7 +73,7 @@ class Chamado extends Form
             ),
         ));
         $this->add(array(
-            'name' => 'tecnico_alocado',
+            'name' => 'tecnicoalocado',
             'attributes' => array(
                 'type'  => 'text',
             ),
@@ -114,7 +114,7 @@ class Chamado extends Form
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Observação',
+                'label' => 'Controlador',
             ),
         ));
         $this->add(array(
