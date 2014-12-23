@@ -70,14 +70,10 @@ class IndexController extends ActionController {
         ini_set ('memory_limit', '1024M');
         $objReader = new \PHPExcel_Reader_Excel2007();
         $objReader->setReadDataOnly(true);
-        $objPHPExcel = $objReader->load('C:/wamp/www/zf2napratica2/chamados.xlsx');
+        $objPHPExcel = $objReader->load('C:/wamp/www/zf2napratica2/chamados.xlsx')->getActiveSheet()->toArray();
         
-        $sheetData = $objPHPExcel->getActiveSheet()->toArray();
-            //var_dump($sheetData);
-            
-        echo strtolower($sheetData[0][0]);
-        
-        die();
+        //$sheetData = $objPHPExcel->getActiveSheet()->toArray();
+        var_dump($objPHPExcel);
 
         //return new ViewModel(array(
             //'chamados' => $tecnico->fetchAll(null, array('status' => 'FECHADO'))->toArray()
